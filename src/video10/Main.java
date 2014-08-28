@@ -35,11 +35,12 @@ public class Main extends JFrame {
     }
 
     public void paintComponent(Graphics g) {
-        g.setColor(Color.BLACK);
+        g.setColor(Color.RED);
 
         Rectangle r1 = new Rectangle(rectX, rectY, 25, 25);
         Rectangle r2 = new Rectangle(175, 175, 50, 50);
         g.fillRect(r2.x, r2.y, r2.width, r2.height);
+        g.setColor(Color.BLUE);
         g.fillRect(r1.x, r1.y, r1.width, r1.height);
         if (r1.intersects(r2)) {
             g.drawString("HIT", 175, 140);
